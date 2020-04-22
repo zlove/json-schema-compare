@@ -2,8 +2,10 @@
   "name": "json-schema-compare",
   "version": "0.2.2",
   "description": "Compare json schemas smarter.",
-  "main": "src/index.js",
+  "main": "dist/index.js",
+  "module": "src/index.js",
   "scripts": {
+    "build": "NODE_ENV=production babel ./src/index.js --out-dir ./dist",
     "eslint": "eslint src test",
     "test": "npm run eslint && nyc --reporter=html --reporter=text mocha test/specs",
     "develop": "mocha test/specs --recursive --watch",
@@ -31,6 +33,9 @@
   },
   "homepage": "https://github.com/mokkabonna/json-schema-compare#readme",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
     "chai": "^4.1.2",
     "coveralls": "^3.0.0",
     "eslint": "^6.8.0",
