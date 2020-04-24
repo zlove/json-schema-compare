@@ -1,15 +1,5 @@
 "use strict";
 
-require("core-js/modules/es.array.concat");
-
-require("core-js/modules/es.array.every");
-
-require("core-js/modules/es.array.filter");
-
-require("core-js/modules/es.array.index-of");
-
-require("core-js/modules/es.object.keys");
-
 var isEqual = require('lodash/isEqual');
 
 var sortBy = require('lodash/sortBy');
