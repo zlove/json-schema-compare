@@ -3,7 +3,6 @@
   "version": "0.2.2",
   "description": "Compare json schemas smarter.",
   "main": "dist/index.js",
-  "module": "src/index.js",
   "scripts": {
     "build": "NODE_ENV=production babel ./src/index.js --out-dir ./dist",
     "eslint": "eslint src test",
@@ -12,7 +11,8 @@
     "coverage": "nyc report --reporter=text-lcov | coveralls"
   },
   "directories": {
-    "lib": "src",
+    "lib": "dist",
+    "src": "src",
     "test": "test"
   },
   "repository": {
